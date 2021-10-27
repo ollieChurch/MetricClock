@@ -19,6 +19,10 @@ h1 {
     padding: 5px;
 }
 
+button {
+    cursor: pointer;
+}
+
 .navigation {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -180,6 +184,7 @@ label {
 #timeInput {
     grid-area: u;
     color: darkgreen;
+    cursor: pointer;
 }
 
 #conversionOutput {
