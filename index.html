@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Steven's Metric Clock</title>
+        
+        <!-- CSS -->
+        <link href="css/stylesheet.css" rel="stylesheet">
+        
+        <!-- JQUERY LIBRARY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+        <!-- PHONE SCALING -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <header>
+            <h1>Steven's Metric Clock</h1>
+            <div class="navigation">
+                <button class="navButtons" id="selected" onClick="changePage(clock)"><strong>Clock</strong></button>
+                <button class="navButtons" onClick="changePage(conversion)">Conversion</button>
+            </div>
+        </header>
+        
+        <main>
+            <p class="intro">The old system of time no longer suits our modern metric lives. This clock is the first of it's kind, it converts time into metric and allows you to keep track. You're welcome. </p>
+            
+            <h2 class="clockTitle" id="oldTitle">SI System Of Time</h2>
+            <div class= "clocks" id="clock"></div>
+            
+            <h2 class="clockTitle">Metric System Of Time</h2>
+            <div class="clocks" id="metricClock"></div>
+            
+            <div id="hideButton">
+                <p id="buttonBlurb">Once you are ready to make the full jump to metric time you can hide the old system from view.</p>
+
+                <button class="functionalButtons" id="clockHide" onClick="hideOldTime()">Hide Old Time</button>
+            </div>
+        </main>
+    </body>
+
+    <script src="js/clock.js" type="application/javascript"></script>
+    <script src="js/navigation.js" type="application/javascript"></script>
+</html>

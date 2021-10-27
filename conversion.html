@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Metric Time Conversion</title>
+              
+        <!-- CSS -->
+        <link href="css/stylesheet.css" rel="stylesheet">
+        
+        <!-- JQUERY LIBRARY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+        <!-- PHONE SCALING -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    
+    <body>
+        <header>
+            <h1>Steven's Metric Clock</h1>
+            <div class="navigation">
+                <button class="navButtons" onClick="changePage(clock)">Clock</button>
+                <button class="navButtons" id="selected" onClick="changePage(conversion)"><strong>Conversion</strong></button>
+            </div>
+        </header>
+        
+        <main>
+            <p class="intro">A handy tool to help those around you keep up in their transition to metric time.</p>
+            
+            <div class="converter">
+                <button class="functionalButtons" id="toMetric" onClick="changeForm(fromSI)">To Metric</button>
+                <button class="functionalButtons" id="fromMetric" onClick="changeForm(fromMetric)">From Metric</button>
+
+            <div id="conversionForm">
+                <label for="timeInput" id="inputLabel">Input</label>
+                <input class="formItems" id="timeInput" type="time" name="timeInput" placeholder="Metric Time" oninput="convertTime()">
+                <label for="conversionOutput" id="conversionLabel">Converts To:</label>
+                <output class="formItems" id="conversionOutput" name="conversionOutput"></output>
+                <input class="functionalButtons" id="resetButton" type="reset" onClick="resetOutput()">
+            </div>
+                
+            </div>
+            
+        </main>
+        
+        <script src="js/conversion.js" type="application/javascript"></script>     
+        <script src="js/navigation.js" type="application/javascript"></script>   
+    </body>
+</html>

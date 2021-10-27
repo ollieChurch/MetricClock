@@ -1,0 +1,193 @@
+/*UNIVERSAL*/
+
+body {
+    margin: 0;
+    background-color: mintcream;
+}
+
+header {
+    text-align: center;
+    color: green;
+    background: palegreen;
+    font-size: 25px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 5px;
+    padding: 5px;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: darkgreen;
+}
+
+.navButtons {
+    background: none;
+	border: none;
+    font-size: 20px;
+    color: mintcream;
+    padding: 5px;
+    transition: all 0.75s;
+}
+
+.navButtons:not(#selected):hover {
+    background: green;
+}
+
+#selected {
+    color: palegreen;
+}
+
+.navigation > :first-child {
+    border-right: mintcream 5px solid;
+}
+
+main {
+    margin: 10px;
+    margin-top: -10px;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 18px;
+}
+
+.intro {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.functionalButtons {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 30px;
+    
+    background-color: darkgreen;
+    color: mintcream;
+    border: 5px palegreen solid;
+    transition: all 0.75s;
+}
+
+.functionalButtons:hover {
+    background-color: palegreen;
+    color: darkgreen;
+    border-color: darkgreen;
+}
+
+/*CLOCK*/
+
+.clockTitle {
+    text-align: center;
+}
+
+.clocks {
+    text-align: center;
+    margin: 20px;
+    margin-top: -15px;
+    padding: 10px;
+    
+    font-size: 50px;
+    background-color: palegreen;
+    border: 5px darkgreen solid;
+}
+
+#hideButton {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+}
+
+#buttonBlurb {
+	padding: 5px;
+}
+
+/*CONVERSION*/
+
+.converter {
+	display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10px;
+    margin: 0 20px;
+    grid-template-areas:
+        "t f"
+        "i i"
+}
+
+#toMetric {
+    grid-area: t;
+}
+
+#fromMetric {
+	grid-area: f;
+}
+
+#conversionForm {
+	grid-area: i;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: 
+        "i i ."
+        "u u u"
+        "c c ."
+        "o o o"
+        ". r ."
+}
+
+.formItems {
+    background: palegreen;
+    color: darkgreen;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    text-align: center; 
+    align-items: center;
+    
+    font-size: 50px;
+    border: darkgreen 5px solid;
+    padding: 0 10px;
+    width: 100%;
+}
+
+label {
+    margin-top: 20px;
+    font-size: 25px;
+    color: darkgreen;
+}
+
+#inputLabel {
+    grid-area: i;
+}
+
+#conversionLabel {
+    grid-area: c;
+}
+
+#timeInput {
+    grid-area: u;
+    color: darkgreen;
+}
+
+#conversionOutput {
+    grid-area: o;
+}
+
+#resetButton {
+    grid-area: r;
+	margin-top: 20px;
+    justify-self: center;
+}
