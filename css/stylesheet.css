@@ -7,16 +7,22 @@ body {
 
 header {
     text-align: center;
-    color: green;
+    color: black;
     background: palegreen;
-    font-size: 25px;
+    font-size: 2.25rem;
     padding-top: 10px;
     margin-bottom: 20px;
 }
 
 h1 {
-    margin: 5px;
-    padding: 5px;
+    margin-top: .25em;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.headerSubtitle {
+    padding: 0;
+    margin-top: 0;
 }
 
 button {
@@ -32,7 +38,7 @@ button {
 .navButtons {
     background: none;
 	border: none;
-    font-size: 20px;
+    font-size: 1.75rem;
     color: mintcream;
     padding: 5px;
     transition: all 0.75s;
@@ -58,19 +64,20 @@ main {
 }
 
 p {
-    font-size: 18px;
+    font-size: 1.25rem;
 }
 
 .intro {
     text-align: center;
-    margin: 20px 0;
+    margin: 20px auto;
+    max-width: 1000px;
 }
 
 .functionalButtons {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    font-size: 30px;
+    font-size: 2rem;
     
     background-color: darkgreen;
     color: mintcream;
@@ -92,13 +99,14 @@ p {
 
 .clocks {
     text-align: center;
-    margin: 20px;
-    margin-top: -15px;
+    margin: -15px auto 20px auto;
     padding: 10px;
     
-    font-size: 50px;
+    font-size: 3.5rem;
     background-color: palegreen;
     border: 5px darkgreen solid;
+
+    max-width: 800px;
 }
 
 #hideButton {
@@ -107,8 +115,9 @@ p {
     grid-gap: 5px;
     justify-content: space-evenly;
     align-items: center;
-    margin: 10px;
+    margin: 10px auto;
     text-align: center;
+    max-width: 1000px
 }
 
 #buttonBlurb {
@@ -145,9 +154,9 @@ p {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     grid-template-areas: 
-        "i i ."
+        "i i i"
         "u u u"
-        "c c ."
+        "c c c"
         "o o o"
         ". r ."
 }
@@ -161,16 +170,19 @@ p {
     text-align: center; 
     align-items: center;
     
-    font-size: 50px;
+    font-size: 3.5rem;
     border: darkgreen 5px solid;
     padding: 0 10px;
     width: 100%;
+    max-width: 800px;
 }
 
 label {
-    margin-top: 20px;
-    font-size: 25px;
+    font-size: 1.5rem;
     color: darkgreen;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto 0 auto;
 }
 
 #inputLabel {
@@ -183,12 +195,13 @@ label {
 
 #timeInput {
     grid-area: u;
-    color: darkgreen;
+    color: black;
     cursor: pointer;
 }
 
 #conversionOutput {
     grid-area: o;
+    color: black;
 }
 
 #resetButton {
