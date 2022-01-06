@@ -31,8 +31,8 @@ function updateClock() {
     metricTime = (fractionHours + fractionMinutes).toFixed(2);	
     metricTime = (metricTime === 0.0 ? metricTime = 10.00 : metricTime);
   	
-   	$("#clock").html(currentTimeString);	
-    $("#metricClock").html(metricTime);
+   	$("#clock").text(currentTimeString);	
+    $("#metricClock").text(metricTime);
  }
 
 function hideOldTime() {
@@ -42,8 +42,8 @@ function hideOldTime() {
     clockHidden = !clockHidden;
     
     if (clockHidden === true) {
-        $("#clockHide").html("Show Old Time");
+        $("#clockHide").text("Show Old Time");
     } else {
-        $("#clockHide").html("Hide Old Time");
+        $("#clockHide").text("Hide Old Time");
     }
 }

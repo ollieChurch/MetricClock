@@ -24,7 +24,7 @@ $("#conversionOutput").css("height", ($("#timeInput").height()));
 function changeForm(conversionType) {
     $("#timeInput").attr("type", conversionType);
     $("#conversionForm").css("visibility", "visible");
-    $("#conversionOutput").html("");
+    $("#conversionOutput").text("");
     $("#timeInput").css("height", ($("#conversionOutput").height()));
     
     if (conversionType == fromMetric) {
@@ -39,7 +39,7 @@ function changeForm(conversionType) {
 }
 
 function resetOutput () {
-    $("#conversionOutput").html("");
+    $("#conversionOutput").text("");
     $("#timeInput").val("");
 }
 
@@ -84,5 +84,5 @@ function convertTime () {
         convertedTime = (convertedTime < 0.01 ? 10.00 : convertedTime);
     }
 
-    $("#conversionOutput").html(convertedTime);
+    $("#conversionOutput").text(convertedTime);
 }
