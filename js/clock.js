@@ -43,7 +43,9 @@ function hideOldTime() {
     
     if (clockHidden === true) {
         $("#clockHide").text("Show Old Time");
+        $("#hideButton").css("max-width", "400px");
     } else {
         $("#clockHide").text("Hide Old Time");
+        $("#hideButton").css("max-width", "1000px");
     }
 }
